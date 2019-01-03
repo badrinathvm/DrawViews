@@ -42,6 +42,7 @@ class CanvasView: UIView {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        //Every time it touches the canvas need to append a new line.
         lines.append([CGPoint]())
         print(lines)
     }
