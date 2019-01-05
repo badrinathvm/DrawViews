@@ -15,6 +15,7 @@
 		B81EEB4C21DE97E1006BB2DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B81EEB4A21DE97E1006BB2DB /* LaunchScreen.storyboard */; };
 		B81EEB5721DE97E2006BB2DB /* DraswViewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EEB5621DE97E2006BB2DB /* DraswViewsTests.swift */; };
 		B81EEB6221DE97E2006BB2DB /* DraswViewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EEB6121DE97E2006BB2DB /* DraswViewsUITests.swift */; };
+		B81EEB7021E16CF9006BB2DB /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = B81EEB6F21E16CF8006BB2DB /* test.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		B81EEB5D21DE97E2006BB2DB /* DraswViewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DraswViewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B81EEB6121DE97E2006BB2DB /* DraswViewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraswViewsUITests.swift; sourceTree = "<group>"; };
 		B81EEB6321DE97E2006BB2DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B81EEB6F21E16CF8006BB2DB /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				B81EEB3E21DE97DE006BB2DB /* AppDelegate.swift */,
 				B81EEB4021DE97DE006BB2DB /* ViewController.swift */,
+				B81EEB6F21E16CF8006BB2DB /* test.png */,
 				B81EEB4221DE97DE006BB2DB /* Main.storyboard */,
 				B81EEB4821DE97E1006BB2DB /* Assets.xcassets */,
 				B81EEB4A21DE97E1006BB2DB /* LaunchScreen.storyboard */,
@@ -235,6 +238,7 @@
 				B81EEB4C21DE97E1006BB2DB /* LaunchScreen.storyboard in Resources */,
 				B81EEB4921DE97E1006BB2DB /* Assets.xcassets in Resources */,
 				B81EEB4421DE97DE006BB2DB /* Main.storyboard in Resources */,
+				B81EEB7021E16CF9006BB2DB /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
