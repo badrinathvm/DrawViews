@@ -19,6 +19,10 @@
 		B81EEB7221E19B55006BB2DB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EEB7121E19B54006BB2DB /* MainViewController.swift */; };
 		B81EEB7621E19C37006BB2DB /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EEB7521E19C37006BB2DB /* Service.swift */; };
 		B81EEB7921E1B6F3006BB2DB /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EEB7821E1B6F3006BB2DB /* Movie.swift */; };
+		B81EEB7C21E1CE05006BB2DB /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EEB7B21E1CE05006BB2DB /* MovieCell.swift */; };
+		B81EEB7F21E1D48D006BB2DB /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EEB7E21E1D48D006BB2DB /* MovieViewModel.swift */; };
+		B81EEB8221E1D88E006BB2DB /* CustomDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EEB8121E1D88E006BB2DB /* CustomDataSource.swift */; };
+		B81EEB8421E27464006BB2DB /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EEB8321E27464006BB2DB /* ImageFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		B81EEB7121E19B54006BB2DB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B81EEB7521E19C37006BB2DB /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		B81EEB7821E1B6F3006BB2DB /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		B81EEB7B21E1CE05006BB2DB /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		B81EEB7E21E1D48D006BB2DB /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		B81EEB8121E1D88E006BB2DB /* CustomDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataSource.swift; sourceTree = "<group>"; };
+		B81EEB8321E27464006BB2DB /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,9 @@
 		B81EEB3221DE97DE006BB2DB = {
 			isa = PBXGroup;
 			children = (
+				B81EEB8021E1D87F006BB2DB /* Utils */,
+				B81EEB7D21E1D47B006BB2DB /* ViewModel */,
+				B81EEB7A21E1CDE9006BB2DB /* View */,
 				B81EEB7721E1B6E7006BB2DB /* Model */,
 				B81EEB7421E19C28006BB2DB /* Service */,
 				B81EEB7321E19BFC006BB2DB /* ViewController */,
@@ -162,6 +173,31 @@
 				B81EEB7821E1B6F3006BB2DB /* Movie.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B81EEB7A21E1CDE9006BB2DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B81EEB7B21E1CE05006BB2DB /* MovieCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B81EEB7D21E1D47B006BB2DB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B81EEB7E21E1D48D006BB2DB /* MovieViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B81EEB8021E1D87F006BB2DB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B81EEB8121E1D88E006BB2DB /* CustomDataSource.swift */,
+				B81EEB8321E27464006BB2DB /* ImageFetcher.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,12 +332,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B81EEB7C21E1CE05006BB2DB /* MovieCell.swift in Sources */,
 				B81EEB4121DE97DE006BB2DB /* DrawViewController.swift in Sources */,
 				B81EEB4721DE97DE006BB2DB /* DraswViews.xcdatamodeld in Sources */,
 				B81EEB7921E1B6F3006BB2DB /* Movie.swift in Sources */,
 				B81EEB7621E19C37006BB2DB /* Service.swift in Sources */,
+				B81EEB8221E1D88E006BB2DB /* CustomDataSource.swift in Sources */,
+				B81EEB7F21E1D48D006BB2DB /* MovieViewModel.swift in Sources */,
 				B81EEB3F21DE97DE006BB2DB /* AppDelegate.swift in Sources */,
 				B81EEB7221E19B55006BB2DB /* MainViewController.swift in Sources */,
+				B81EEB8421E27464006BB2DB /* ImageFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

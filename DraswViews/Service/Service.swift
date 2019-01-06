@@ -33,7 +33,7 @@ public enum Result<Value, NetWorkError> {
 
 class Service {
     
-    let url = "https://gist.githubusercontent.com/badrinathvm/ea02c34245ed69e37ecd2e1d8386edcb/raw/f7bbd587566f7ccfdbc80444844b168c30352a22/movie.json"
+    let url = "https://gist.githubusercontent.com/badrinathvm/ea02c34245ed69e37ecd2e1d8386edcb/raw/5c0669f5ff477492d6c5bf43c95fea475310350d/movie.json"
     
     func callURL(endPoint: String, completion : @escaping (Result<Data,NetWorkError>)  -> Void ) {
         guard let url = URL.init(string: endPoint) else { return }
@@ -49,14 +49,13 @@ class Service {
         task.resume()
     }
     
-    func decodeModel<T:Decodable>(type: T.Type, completion: @escaping(T) -> Void ) {
+    func decodeModel<T:Decodable>(type: T.Type, completion: @escaping([T]) -> Void ) {
         callURL(endPoint: url) { (result) in
             if case Result.success(let data) = result {
                 DispatchQueue.main.async {
                     let decoder = JSONDecoder()
                     do {
-                        let model = try decoder.decode(T.self, from: data)
-                        print(model)
+                        let model = try decoder.decode([T].self, from: data)
                         completion(model)
                     }catch let error {
                      print(error.localizedDescription)
@@ -65,4 +64,5 @@ class Service {
             }
         }
     }
+    
 }

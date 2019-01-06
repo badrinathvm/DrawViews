@@ -27,9 +27,7 @@ enum MovieKeys : String, CodingKey {
     case venue = "venue"
 }
 
-
 extension Movie {
-    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: MovieKeys.self)
         id = try container.decode(Int.self, forKey: .id)
@@ -39,5 +37,4 @@ extension Movie {
         category = try container.decode(Int.self, forKey: .category)
         venue = try container.decode(Int.self, forKey: .venue)
     }
-    
 }
