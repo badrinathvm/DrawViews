@@ -64,7 +64,7 @@ class CanvasView: UIView {
     }
 }
 
-class ViewController: UIViewController,UIGestureRecognizerDelegate {
+class DrawViewController: UIViewController,UIGestureRecognizerDelegate {
     
     var canvasView = CanvasView()
     
