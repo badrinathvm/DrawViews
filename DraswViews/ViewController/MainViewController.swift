@@ -81,7 +81,7 @@ extension MainViewController: UITableViewDataSourcePrefetching {
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         indexPaths.forEach { indexPath in
             guard let model = self.movieListViewModel?.movieViewModels[indexPath.row] else { return }
-            ImageFetcher().loadImage(thumbnailUrl: model.movie.thumbnailUrl, completion: { (image) in
+            self.imageFetcher.loadImage(thumbnailUrl: model.movie.thumbnailUrl, completion: { (image) in
                 print("Image Downloaded at \(indexPath.row)")
             })
         }
@@ -90,7 +90,7 @@ extension MainViewController: UITableViewDataSourcePrefetching {
     func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
         indexPaths.forEach { indexPath in
              guard let model = self.movieListViewModel?.movieViewModels[indexPath.row] else { return }
-            ImageFetcher().cancelDownloadingImage(url: model.movie.thumbnailUrl)
+           self.imageFetcher.cancelDownloadingImage(url: model.movie.thumbnailUrl)
              print("Cancelling PeFetching \(indexPath)")
         }
     }

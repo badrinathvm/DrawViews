@@ -22,10 +22,10 @@ class ImageFetcher {
     func loadImage(thumbnailUrl: String, completion: @escaping (UIImage) -> ())  {
        
         //Check image Cache before making a network call
-        if let image = imageCache.object(forKey: thumbnailUrl as AnyObject)  as? UIImage {
-            completion(image)
-            return
-        }
+//        if let image = imageCache.object(forKey: thumbnailUrl as AnyObject)  as? UIImage {
+//            completion(image)
+//            return
+//        }
         
         
         guard let url = URL.init(string: thumbnailUrl) else { return }
