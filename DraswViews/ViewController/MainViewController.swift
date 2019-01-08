@@ -51,6 +51,10 @@ class MainViewController: UIViewController {
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Selected Row is \(indexPath.row)")
+        
+        //navigate to new View controller
+        let cardVC = CardviewController()
+        self.navigationController?.pushViewController(cardVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

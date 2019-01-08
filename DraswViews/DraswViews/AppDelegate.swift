@@ -20,10 +20,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         guard let window = window else { return false }
         
-        let mainVC = MainViewController()
+        
+        let mainVC = EntryViewController()
         window.rootViewController = UINavigationController(rootViewController: mainVC)
         window.makeKeyAndVisible()
-    
+        
+        
+/* let tabBarController = UITabBarController()
+ 
+ let moviesVC = MainViewController()
+ moviesVC.title = "Movies"
+ 
+ let cardVC = CardviewController()
+ cardVC.title = "Cards"
+ 
+ moviesVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
+ cardVC.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 1)
+ tabBarController.viewControllers = [ moviesVC, cardVC ]
+ 
+ tabBarController.viewControllers = [ moviesVC, cardVC ].map { UINavigationController(rootViewController: $0)}
+ */
         return true
     }
 
