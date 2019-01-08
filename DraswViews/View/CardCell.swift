@@ -16,6 +16,7 @@ class CardCell: UICollectionViewCell {
         let cardView = UIView()
         cardView.translatesAutoresizingMaskIntoConstraints = false
         cardView.backgroundColor = UIColor.blue
+        //cardView.addGradientWithColor(color: UIColor.red)
         cardView.layer.cornerRadius = 10.0
         cardView.layer.shadowColor = UIColor.gray.cgColor
         cardView.layer.shadowRadius = 5.0
@@ -41,16 +42,16 @@ class CardCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    private let gradientLayer = CAGradientLayer()
-    
+  
     func setup() {
-        //self.contentView.layer.borderColor = UIColor.gray.cgColor
-        //self.contentView.layer.borderWidth = 0.5
-        contentView.layer.insertSublayer(gradientLayer, at: 0)
-       
         heightConstraint = self.cardContentView.heightAnchor.constraint(equalToConstant: 200)
         self.contentView.addSubview(cardContentView)
+        
+//        let gradientLayer = CAGradientLayer()
+//        gradientLayer.colors = [UIColor.white.cgColor,UIColor.red.withAlphaComponent(1).cgColor ]
+//        cardContentView.layer.addSublayer(gradientLayer)
+        
+        
         NSLayoutConstraint.activate([
             self.cardContentView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             self.cardContentView.leadingAnchor.constraint(equalTo: self.leadingAnchor , constant: 30),
@@ -68,5 +69,17 @@ class CardCell: UICollectionViewCell {
             self.pieChart.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -50),
             self.pieChart.heightAnchor.constraint(equalToConstant: 300)
         ])
+    }
+
+}
+
+
+extension UIView {
+    func addGradientWithColor(color: UIColor) {
+        let gradient = CAGradientLayer()
+        gradient.frame = self.bounds
+        gradient.colors = [UIColor.clear.cgColor, color.cgColor]
+        
+        self.layer.insertSublayer(gradient, at: 0)
     }
 }

@@ -24,7 +24,11 @@ class EntryViewController: UITabBarController, UITabBarControllerDelegate {
         cardsVC.title = "Cards"
         cardsVC.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 1)
         
-        self.viewControllers = [ moviesVC, cardsVC ]
+        let scrathVC = ScratchViewController()
+        scrathVC.title = "Scratch"
+        scrathVC.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 2)
+        
+        self.viewControllers = [ moviesVC, cardsVC, scrathVC ]
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {

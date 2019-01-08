@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class CardviewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
    
@@ -64,6 +65,7 @@ class CardviewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardCell", for: indexPath) as! CardCell
         //cell.backgroundColor = UIColor.cyan
+        //cell.cardContentView.gradientColors = [UIColor.blue, UIColor.cyan]
         return cell
     }
     

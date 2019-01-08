@@ -48,8 +48,10 @@ class PieChartView: UIView {
             context.setFillColor(segment.color.cgColor)
             context.move(to: center)
             context.addArc(center: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: false)
+            //context.addRect(CGRect(x: 10, y: 20, width: 400, height: 40))
             context.fillPath()
             
+           
             //update start angle for the next iteration.
             startAngle = endAngle
         }

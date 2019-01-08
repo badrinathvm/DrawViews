@@ -10,7 +10,6 @@
 		B81EEB3F21DE97DE006BB2DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EEB3E21DE97DE006BB2DB /* AppDelegate.swift */; };
 		B81EEB4121DE97DE006BB2DB /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EEB4021DE97DE006BB2DB /* DrawViewController.swift */; };
 		B81EEB4421DE97DE006BB2DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B81EEB4221DE97DE006BB2DB /* Main.storyboard */; };
-		B81EEB4721DE97DE006BB2DB /* DraswViews.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B81EEB4521DE97DE006BB2DB /* DraswViews.xcdatamodeld */; };
 		B81EEB4921DE97E1006BB2DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B81EEB4821DE97E1006BB2DB /* Assets.xcassets */; };
 		B81EEB4C21DE97E1006BB2DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B81EEB4A21DE97E1006BB2DB /* LaunchScreen.storyboard */; };
 		B81EEB5721DE97E2006BB2DB /* DraswViewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EEB5621DE97E2006BB2DB /* DraswViewsTests.swift */; };
@@ -28,6 +27,9 @@
 		B81EEB8A21E40697006BB2DB /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EEB8921E40697006BB2DB /* CardCell.swift */; };
 		B81EEB8C21E41E8A006BB2DB /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EEB8B21E41E8A006BB2DB /* EntryViewController.swift */; };
 		B81EEB8E21E42445006BB2DB /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EEB8D21E42445006BB2DB /* PieChartView.swift */; };
+		B81EEB9121E4459A006BB2DB /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EEB9021E4459A006BB2DB /* CoreDataStack.swift */; };
+		B81EEB9321E475DF006BB2DB /* ScratchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EEB9221E475DF006BB2DB /* ScratchViewController.swift */; };
+		B81EEB9521E4766B006BB2DB /* ScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EEB9421E4766B006BB2DB /* ScratchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +54,6 @@
 		B81EEB3E21DE97DE006BB2DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B81EEB4021DE97DE006BB2DB /* DrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
 		B81EEB4321DE97DE006BB2DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B81EEB4621DE97DE006BB2DB /* DraswViews.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DraswViews.xcdatamodel; sourceTree = "<group>"; };
 		B81EEB4821DE97E1006BB2DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B81EEB4B21DE97E1006BB2DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B81EEB4D21DE97E1006BB2DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +76,9 @@
 		B81EEB8921E40697006BB2DB /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		B81EEB8B21E41E8A006BB2DB /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		B81EEB8D21E42445006BB2DB /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		B81EEB9021E4459A006BB2DB /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		B81EEB9221E475DF006BB2DB /* ScratchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchViewController.swift; sourceTree = "<group>"; };
+		B81EEB9421E4766B006BB2DB /* ScratchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 		B81EEB3221DE97DE006BB2DB = {
 			isa = PBXGroup;
 			children = (
+				B81EEB8F21E44585006BB2DB /* CoreData */,
 				B81EEB8021E1D87F006BB2DB /* Utils */,
 				B81EEB7D21E1D47B006BB2DB /* ViewModel */,
 				B81EEB7A21E1CDE9006BB2DB /* View */,
@@ -137,7 +142,6 @@
 				B81EEB4821DE97E1006BB2DB /* Assets.xcassets */,
 				B81EEB4A21DE97E1006BB2DB /* LaunchScreen.storyboard */,
 				B81EEB4D21DE97E1006BB2DB /* Info.plist */,
-				B81EEB4521DE97DE006BB2DB /* DraswViews.xcdatamodeld */,
 			);
 			path = DraswViews;
 			sourceTree = "<group>";
@@ -168,6 +172,7 @@
 				B81EEB8521E3F2B8006BB2DB /* CardViewController.swift */,
 				B81EEB8721E3F85A006BB2DB /* CardLayout.swift */,
 				B81EEB8B21E41E8A006BB2DB /* EntryViewController.swift */,
+				B81EEB9221E475DF006BB2DB /* ScratchViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				B81EEB7B21E1CE05006BB2DB /* MovieCell.swift */,
 				B81EEB8921E40697006BB2DB /* CardCell.swift */,
 				B81EEB8D21E42445006BB2DB /* PieChartView.swift */,
+				B81EEB9421E4766B006BB2DB /* ScratchView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,6 +219,14 @@
 				B81EEB8321E27464006BB2DB /* ImageFetcher.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		B81EEB8F21E44585006BB2DB /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B81EEB9021E4459A006BB2DB /* CoreDataStack.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,17 +363,19 @@
 			files = (
 				B81EEB7C21E1CE05006BB2DB /* MovieCell.swift in Sources */,
 				B81EEB4121DE97DE006BB2DB /* DrawViewController.swift in Sources */,
-				B81EEB4721DE97DE006BB2DB /* DraswViews.xcdatamodeld in Sources */,
 				B81EEB8C21E41E8A006BB2DB /* EntryViewController.swift in Sources */,
 				B81EEB7921E1B6F3006BB2DB /* Movie.swift in Sources */,
 				B81EEB7621E19C37006BB2DB /* Service.swift in Sources */,
 				B81EEB8E21E42445006BB2DB /* PieChartView.swift in Sources */,
+				B81EEB9121E4459A006BB2DB /* CoreDataStack.swift in Sources */,
 				B81EEB8221E1D88E006BB2DB /* CustomDataSource.swift in Sources */,
 				B81EEB7F21E1D48D006BB2DB /* MovieViewModel.swift in Sources */,
 				B81EEB8821E3F85A006BB2DB /* CardLayout.swift in Sources */,
 				B81EEB3F21DE97DE006BB2DB /* AppDelegate.swift in Sources */,
 				B81EEB8621E3F2B8006BB2DB /* CardViewController.swift in Sources */,
+				B81EEB9521E4766B006BB2DB /* ScratchView.swift in Sources */,
 				B81EEB7221E19B55006BB2DB /* MainViewController.swift in Sources */,
+				B81EEB9321E475DF006BB2DB /* ScratchViewController.swift in Sources */,
 				B81EEB8A21E40697006BB2DB /* CardCell.swift in Sources */,
 				B81EEB8421E27464006BB2DB /* ImageFetcher.swift in Sources */,
 			);
@@ -684,19 +700,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		B81EEB4521DE97DE006BB2DB /* DraswViews.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				B81EEB4621DE97DE006BB2DB /* DraswViews.xcdatamodel */,
-			);
-			currentVersion = B81EEB4621DE97DE006BB2DB /* DraswViews.xcdatamodel */;
-			path = DraswViews.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = B81EEB3321DE97DE006BB2DB /* Project object */;
 }
