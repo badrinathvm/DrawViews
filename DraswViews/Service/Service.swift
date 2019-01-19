@@ -33,6 +33,8 @@ public enum Result<Value, NetWorkError> {
 
 class Service {
     
+    let test = "https://gist.githubusercontent.com/badrinathvm/a573f84667340dad5cb1c2109417faa4/raw/690c304279f15f2e8990248e22b8d176937adb59/test.json"
+    
     let url = "https://gist.githubusercontent.com/badrinathvm/ea02c34245ed69e37ecd2e1d8386edcb/raw/5c0669f5ff477492d6c5bf43c95fea475310350d/movie.json"
     
     func callURL(endPoint: String, completion : @escaping (Result<Data,NetWorkError>)  -> Void ) {
@@ -64,5 +66,41 @@ class Service {
             }
         }
     }
+    
+    
+    func callUserService() {
+        callURL(endPoint: test) { (result) in
+            if case Result.success(let data) = result {
+                DispatchQueue.main.async {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    do {
+                        let model = try decoder.decode(User.CodingData.self, from: data)
+                        print(model.user)
+                    } catch let error {
+                      print(error.localizedDescription)
+                    }
+                }
+            }
+        }
+    }
+    
+    func callMovieService() {
+        callURL(endPoint: url) { (result) in
+            if case Result.success(let data) = result {
+                DispatchQueue.main.async {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    do {
+                        let model = try decoder.decode([Movie.CodingData.Container].self, from: data)
+                        print(model)
+                    } catch let error {
+                        print(error.localizedDescription)
+                    }
+                }
+            }
+        }
+    }
+    
     
 }

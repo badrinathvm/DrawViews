@@ -72,6 +72,28 @@ class CardviewController: UIViewController, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.view.safeAreaFrame.width - 70, height: self.view.safeAreaFrame.height)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        //here increase the height of the cell.
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardCell", for: indexPath) as! CardCell
+//        cell.contentView.backgroundColor = UIColor.red
+        
+//        UIView.animate(withDuration: 0.5, delay: 1, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+////            cell.heightConstraint?.constant = 300.0
+////
+////            self.loadViewIfNeeded()
+//        }, completion: nil)
+        
+        
+        if let cell = cell as? CardCell {
+            cell.cardContentView.backgroundColor = UIColor.red
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard let cell = cell as? CardCell else  { return }
+        cell.cardContentView.backgroundColor = UIColor.blue
+    }
 
 }
 

@@ -30,6 +30,7 @@
 		B81EEB9121E4459A006BB2DB /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EEB9021E4459A006BB2DB /* CoreDataStack.swift */; };
 		B81EEB9321E475DF006BB2DB /* ScratchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EEB9221E475DF006BB2DB /* ScratchViewController.swift */; };
 		B81EEB9521E4766B006BB2DB /* ScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81EEB9421E4766B006BB2DB /* ScratchView.swift */; };
+		B83B33D721F3A534002E265D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B33D621F3A534002E265D /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		B81EEB9021E4459A006BB2DB /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		B81EEB9221E475DF006BB2DB /* ScratchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchViewController.swift; sourceTree = "<group>"; };
 		B81EEB9421E4766B006BB2DB /* ScratchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchView.swift; sourceTree = "<group>"; };
+		B83B33D621F3A534002E265D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				B81EEB7821E1B6F3006BB2DB /* Movie.swift */,
+				B83B33D621F3A534002E265D /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				B81EEB8621E3F2B8006BB2DB /* CardViewController.swift in Sources */,
 				B81EEB9521E4766B006BB2DB /* ScratchView.swift in Sources */,
 				B81EEB7221E19B55006BB2DB /* MainViewController.swift in Sources */,
+				B83B33D721F3A534002E265D /* User.swift in Sources */,
 				B81EEB9321E475DF006BB2DB /* ScratchViewController.swift in Sources */,
 				B81EEB8A21E40697006BB2DB /* CardCell.swift in Sources */,
 				B81EEB8421E27464006BB2DB /* ImageFetcher.swift in Sources */,

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct Movie:Decodable {
+struct Movie:Codable {
     var id:Int
     var name:String
     var shortDescription:String
@@ -28,6 +28,8 @@ enum MovieKeys : String, CodingKey {
 }
 
 extension Movie {
+    
+    //Note : Using Coding Keys
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: MovieKeys.self)
         id = try container.decode(Int.self, forKey: .id)
@@ -37,4 +39,17 @@ extension Movie {
         category = try container.decode(Int.self, forKey: .category)
         venue = try container.decode(Int.self, forKey: .venue)
     }
+   
+    //Note  : without using Coding Keys
+    struct CodingData: Codable {
+        struct Container:Codable {
+            var uid:Int
+            var name:String
+            var shortDesc:String
+            var thumbnailUrl: String
+            var category:Int
+            var venue:Int
+        }
+    }
 }
+

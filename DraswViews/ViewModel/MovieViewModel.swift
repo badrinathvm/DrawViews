@@ -19,7 +19,9 @@ class MovieListViewModel {
     init(service: Service, handler: @escaping Handler) {
         self.service = service
         self.handler = handler
-        fetchMovieData()
+        //fetchMovieData()
+        //fetchUserData()
+         service.callMovieService()
     }
     
     func fetchMovieData() {
@@ -27,6 +29,10 @@ class MovieListViewModel {
             self.movieViewModels = movies.map(MovieViewModel.init)
             self.handler()
         })
+    }
+    
+    func fetchUserData() {
+        service.callUserService()
     }
 }
 
